@@ -1,16 +1,4 @@
 # terraform
-practice
-My learning path of provisioning AWS services using terraform.
+This configuration will create a VPC with the CIDR block 10.0.0.0/16 and a single public subnet with the CIDR block 10.0.1.0/24 in the us-west-2a availability zone. The map_public_ip_on_launch option will cause instances launched in this subnet to receive a public IP address.
 
-AWS Services
- VPC
- EKS with EKS managed node group
- RDS (PostgreSQL)
- ElastiCache (Redis)
- MSK
- ElasticSearch
-Provisioning steps and commands
-Rename terraform.tfvars.template to terraform.tfvars and edit the default values as per need.
-terraform init to initialize current dir with given configuration.
-terraform plan to view changes required by the current configuration.
-terraform apply to apply the changes proposed in plan. (provision the changes)
+Note that this is just a simple example, and a real-world VPC configuration may include multiple subnets in multiple availability zones, Internet and NAT gateways, security groups, and other resources.
